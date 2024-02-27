@@ -41,7 +41,6 @@ const AddToCart = ({ product }) => {
         </p>
       </div>
 
-      {/* add to cart  */}
       <CartAmountToggle
         amount={amount}
         setDecrease={setDecrease}

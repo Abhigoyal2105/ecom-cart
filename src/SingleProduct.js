@@ -45,12 +45,10 @@ const SingleProduct = () => {
       <PageNavigation title={name} />
       <Container className="container">
         <div className="grid grid-two-column">
-          {/* product Images  */}
           <div className="product_images">
             <MyImage imgs={image} />
           </div>
 
-          {/* product dAta  */}
           <div className="product-data">
             <h2>{name}</h2>
             <Star stars={stars} reviews={reviews} />
@@ -78,7 +76,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>Delivered </p>
               </div>
 
               <div className="product-warranty-data">

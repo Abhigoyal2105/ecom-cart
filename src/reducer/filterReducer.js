@@ -7,18 +7,6 @@ const filterReducer = (state, action) => {
         priceArr
       );
 
-      // 1way
-      // console.log(Math.max.apply(null, priceArr));
-
-      // let maxPrice = priceArr.reduce(
-      //   (initialVal, curVal) => Math.max(initialVal, curVal),
-      //   0
-      // );
-      // console.log(
-      //   "🚀 ~ file: filterReducer.js ~ line 16 ~ filterReducer ~ maxPrice",
-      //   maxPrice
-      // );
-
       let maxPrice = Math.max(...priceArr);
       console.log(
         "🚀 ~ file: filterReducer.js ~ line 23 ~ filterReducer ~ maxPrice",
@@ -45,8 +33,7 @@ const filterReducer = (state, action) => {
       };
 
     case "GET_SORT_VALUE":
-      // let userSortValue = document.getElementById("sort");
-      // let sort_value = userSortValue.options[userSortValue.selectedIndex].value;
+
       return {
         ...state,
         sorting_value: action.payload,
@@ -54,7 +41,6 @@ const filterReducer = (state, action) => {
 
     case "SORTING_PRODUCTS":
       let newSortData;
-      // let tempSortProduct = [...action.payload];
 
       const { filter_products, sorting_value } = state;
       let tempSortProduct = [...filter_products];

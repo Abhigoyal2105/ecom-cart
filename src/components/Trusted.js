@@ -6,7 +6,6 @@ const Trusted = () => {
       <div className="container">
         <h3>Trusted By 1000+ Companies</h3>
         <div className="brand-section-slider">
-          {/* my 1st img  */}
           <div className="slide">
             <img
               src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"
