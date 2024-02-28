@@ -10,6 +10,7 @@ getLocalCartData = ()=>{
   }
   else{
     return JSON.parse(newLocalData)
+    //JSON.parse helps to convert string to object to object or value
   }
 }
 
@@ -34,6 +35,7 @@ const CartProvider = ({ children }) => {
 
   useEffect(()=>{
     localStorage.setItem("cartData", JSON.stringify(state.cart))
+    //JSON.stringify helps to convert Object or Value to String
   }, [state.cart])
   return (
     <CartContext.Provider value={{ ...state, addToCart, removeItem }}>
