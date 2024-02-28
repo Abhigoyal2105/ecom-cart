@@ -6,11 +6,9 @@ import { useCartContext } from "../context/cart_context";
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
   const { removeItem } = useCartContext();
-  const setDecrease = () => {
-  };
+  const setDecrease = () => {};
 
-  const setIncrease = () => {
-  };
+  const setIncrease = () => {};
 
   return (
     <div className="cart_heading grid grid-five-column">
@@ -26,7 +24,8 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
             <p>color:</p>
             <div
               className="color-style"
-              style={{ backgroundColor: color, color: color }}></div>
+              style={{ backgroundColor: color, color: color }}
+            ></div>
           </div>
         </div>
       </div>

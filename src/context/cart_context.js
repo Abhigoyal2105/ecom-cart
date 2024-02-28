@@ -3,16 +3,15 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
-getLocalCartData = ()=>{
-  let newLocalData = localStorage.getItem("cartData")
-  if(newLocalData == []){
-    return []
-  }
-  else{
-    return JSON.parse(newLocalData)
+getLocalCartData = () => {
+  let newLocalData = localStorage.getItem("cartData");
+  if (newLocalData == []) {
+    return [];
+  } else {
+    return JSON.parse(newLocalData);
     //JSON.parse helps to convert string to object to object or value
   }
-}
+};
 
 const initialState = {
   // cart: [],
@@ -33,10 +32,10 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
 
-  useEffect(()=>{
-    localStorage.setItem("cartData", JSON.stringify(state.cart))
+  useEffect(() => {
+    localStorage.setItem("cartData", JSON.stringify(state.cart));
     //JSON.stringify helps to convert Object or Value to String
-  }, [state.cart])
+  }, [state.cart]);
   return (
     <CartContext.Provider value={{ ...state, addToCart, removeItem }}>
       {children}

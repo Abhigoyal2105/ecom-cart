@@ -33,7 +33,6 @@ const filterReducer = (state, action) => {
       };
 
     case "GET_SORT_VALUE":
-
       return {
         ...state,
         sorting_value: action.payload,
