@@ -9,7 +9,7 @@ getLocalCartData = () => {
     return [];
   } else {
     return JSON.parse(newLocalData);
-    //JSON.parse helps to convert string to object to object or value
+    //JSON.parse helps to convert string to object or value
   }
 };
 
