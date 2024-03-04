@@ -3,7 +3,7 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
-getLocalCartData = () => {
+const getLocalCartData = () => {
   let newLocalData = localStorage.getItem("cartData");
   if (newLocalData == []) {
     return [];
@@ -36,6 +36,7 @@ const CartProvider = ({ children }) => {
     localStorage.setItem("cartData", JSON.stringify(state.cart));
     //JSON.stringify helps to convert Object or Value to String
   }, [state.cart]);
+
   return (
     <CartContext.Provider value={{ ...state, addToCart, removeItem }}>
       {children}
